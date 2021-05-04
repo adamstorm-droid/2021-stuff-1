@@ -116,3 +116,24 @@ li img {
 .ops {
     text-align: left;
 }
+
+
+input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/2;
+    width: 50%;
+}
+
+button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/2;
+    width: 50.4%;
+    text-align: center;
+}
+
+#answer {
+    text-align: center;
+    color: white;
+}

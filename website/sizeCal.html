@@ -2,18 +2,49 @@
 
 <head>
     <title>size calc</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         function calculator() {
             var data = document.getElementById("sizeData").value;
-            alert('the number tyed in is' + data);
-        }
+            if (data < 85) {
+                document.getElementById("answer").innerHTML = 'your size is smaller than the smallest size';
+            }
+            if (data >= 86 && data < 94) {
+                document.getElementById("answer").innerHTML = "your size is S"
+            }
+            if (data >= 95 && data < 101) {
+                document.getElementById("answer").innerHTML = "your size is M"
+            }
+            if (data >= 102 && data < 109) {
+                document.getElementById("answer").innerHTML = "your size is L"
+            }
+            if (data >= 110 && data < 117) {
+                document.getElementById("answer").innerHTML = "your size is XL"
+            }
+            if (data >= 118 && data < 127) {
+                document.getElementById("answer").innerHTML = "your size is XXL"
+            }
 
+            if (data >= 128 && data < 140) {
+                document.getElementById("answer").innerHTML = "your size is XXXL"
+            }
+            if (data > 141) {
+                document.getElementById("answer").innerHTML = "your larger than the largest size"
+
+            }
+        }
     </script>
 </head>
 
-<body>
+<body id="calc">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cat.html">catalogue</a>
+        <a href="sizeCal.html">sizing</a>
+    </nav>
     <h1>size calculator</h1>
     <input type="number" name="size" id="sizeData">
     <button type="submit" onclick="calculator()">submit</button>
+    <p id="answer"> </p>
 
     <body>
